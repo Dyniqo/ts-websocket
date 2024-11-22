@@ -12,4 +12,4 @@ export * from './services/AuthService';
 export * from './services/LoggerService';
 export * from './services/WebSocketService';
 export * from './utils/Config';
-export * from './WebSocketManager';
+export * from './api/WebSocketManager';
