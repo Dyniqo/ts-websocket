@@ -1,0 +1,36 @@
+{
+     "compilerOptions": {
+          "target": "es5",
+          "module": "CommonJS",
+          "forceConsistentCasingInFileNames": true,
+          "strict": true,
+          "moduleResolution": "node",
+          "esModuleInterop": true,
+          "experimentalDecorators": true,
+          "emitDecoratorMetadata": true,
+          "declaration": true,
+          "sourceMap": true,
+          "importHelpers": true,
+          "resolveJsonModule": true,
+          "skipLibCheck": true,
+          "skipDefaultLibCheck": true,
+          "strictFunctionTypes": true,
+          "strictBindCallApply": true,
+          "baseUrl": "./",
+          "strictNullChecks": true,
+          "downlevelIteration": true,
+          "noImplicitAny": true,
+          "noUnusedLocals": false,
+          "noImplicitOverride": true,
+          "types": [
+               "node",
+               "jest"
+          ]
+     },
+     "exclude": [
+          "node_modules",
+          "dist",
+          "build",
+          "tests"
+     ]
+}

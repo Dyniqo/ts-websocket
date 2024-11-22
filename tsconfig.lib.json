@@ -1,0 +1,23 @@
+{
+     "extends": "./tsconfig.base.json",
+     "compilerOptions": {
+          "outDir": "dist",
+          "declaration": true,
+          "declarationDir": "dist/types",
+          "rootDir": "src",
+          "module": "CommonJS",
+          "target": "ES5",
+          "sourceMap": true,
+          "inlineSources": true
+     },
+     "include": [
+          "src/**/*.ts"
+     ],
+     "exclude": [
+          "src/**/__tests__/*",
+          "src/**/test/**",
+          "src/**/tmp/**",
+          "src/**/*.spec.ts",
+          "src/**/*.test.ts"
+     ]
+}

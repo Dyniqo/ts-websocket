@@ -1,0 +1,80 @@
+{
+  "name": "@dyniqo/ts-websocket",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dyniqo",
+    "url": "https://github.com/Dyniqo"
+  },
+  "description": "A robust and flexible TypeScript library for managing WebSocket connections alongside an HTTP server. This library provides seamless integration into Node.js applications with built-in support for dependency injection, modular design, and extensibility.",
+  "types": "./types/index.d.ts",
+  "main": "build/index.cjs.js",
+  "module": "build/index.esm.js",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "types": "./types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:all": "npm run build && npm run build:types",
+    "build:watch": "tsc -b -w",
+    "build:types:watch": "tsc -p tsconfig.types.watch.json -w",
+    "prepublish": "npm run build:all",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "typecheck": "tsc --noEmit -p tsconfig.lib.json"
+  },
+  "keywords": [
+    "websocket",
+    "ws",
+    "typescript",
+    "ts",
+    "reconnecting",
+    "nodejs",
+    "library",
+    "ts-websocket",
+    "real-time",
+    "websocket-manager",
+    "real-time-communication",
+    "dependency-injection",
+    "modular-library",
+    "websocket-library",
+    "websocket-server",
+    "real-time-apps"
+  ],
+  "homepage": "https://github.com/Dyniqo/ts-websocket",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dyniqo/ts-websocket.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/inversify": "^2.0.33",
+    "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.9.0",
+    "@types/ws": "^8.5.13",
+    "express": "^4.17.1",
+    "globals": "^15.12.0",
+    "http": "^0.0.1-security",
+    "inversify": "^6.0.3",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "net": "^1.0.2",
+    "reflect-metadata": "^0.2.2",
+    "tslib": "^2.3.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.14.0",
+    "ws": "^8.18.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

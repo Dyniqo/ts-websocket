@@ -1,0 +1,17 @@
+{
+     "extends": "./tsconfig.base.json",
+     "compilerOptions": {
+          "emitDecoratorMetadata": false,
+          "noImplicitAny": false,
+          "outDir": "dist/tests"
+     },
+     "include": [
+          "tests/**/*.ts",
+          "src/**/*.spec.ts",
+          "src/**/*.test.ts"
+     ],
+     "exclude": [
+          "node_modules",
+          "build"
+     ]
+}
