@@ -4,13 +4,13 @@ import express, { Application } from 'express';
 import http, { IncomingMessage } from 'http';
 import { Socket } from 'net';
 
-import { TYPES } from './config/types';
-import { createContainer } from './config/inversify.config';
-import { IWebSocketManager, IWebSocketManagerOptions } from './interfaces/IWebSocketManager';
-import { ILogger } from './interfaces/ILogger';
-import { IAuthService } from './interfaces/IAuthService';
-import { IWebSocketService } from './interfaces/IWebSocketService';
-import { WebSocketController } from './controllers/WebSocketController';
+import { TYPES } from '../config/types';
+import { createContainer } from '../config/inversify.config';
+import { IWebSocketManager, IWebSocketManagerOptions } from '../interfaces/IWebSocketManager';
+import { ILogger } from '../interfaces/ILogger';
+import { IAuthService } from '../interfaces/IAuthService';
+import { IWebSocketService } from '../interfaces/IWebSocketService';
+import { WebSocketController } from '../controllers/WebSocketController';
 
 /**
  * WebSocketManager: A class for managing WebSocket server and HTTP server interactions.

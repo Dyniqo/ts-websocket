@@ -3,30 +3,62 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import json from "@rollup/plugin-json";
+// import { terser } from "rollup-plugin-terser";
 import del from "rollup-plugin-delete";
-import { terser } from "rollup-plugin-terser";
-import pkg from "./package.json" assert { type: "json" };
+const banner = `/*!
+ * ts-websocket
+ * by LorestaniMe <dyniqo@gmail.com>
+ * https://github.com/Dyniqo/ts-websocket
+ * License MIT
+ */
+`;
 
 export default [
   {
     input: "src/index.ts",
     output: [
       {
-        file: "dist/index.js",
-        format: "esm",
+        file: "dist/ts-websocket.cjs.js",
+        format: "cjs",
         sourcemap: true,
+        banner
       },
       {
-        file: "dist/index.min.js",
+        file: "dist/ts-websocket.esm.js",
         format: "esm",
         sourcemap: true,
-        plugins: [terser()],
+        banner
       },
+      //  {
+      //    file: "dist/ts-websocket.amd.js",
+      //    format: "amd",
+      //    sourcemap: true,
+      //    banner
+      //  },
+      //  {
+      //    file: "dist/ts-websocket-iife.js",
+      //    format: "iife",
+      //    name: "TSWebSocket",
+      //    sourcemap: true,
+      //    banner
+      //  },
+      //  {
+      //    file: "dist/ts-websocket.iife.min.js",
+      //    format: "iife",
+      //    name: "TSWebSocket",
+      //    sourcemap: true,
+      //    plugins: [terser()],
+      //    banner
+      //  },
     ],
     external: [
-      ...Object.keys(pkg.dependencies || {}),
-      ...Object.keys(pkg.devDependencies || {}),
-      ...Object.keys(pkg.peerDependencies || {}),
+      "inversify",
+      "jsonwebtoken",
+      "reflect-metadata",
+      "express",
+      "http",
+      "net",
+      "ws",
     ],
     plugins: [
       resolve(),
@@ -35,24 +67,19 @@ export default [
       typescript({ tsconfig: "./tsconfig.json" }),
     ],
   },
+
   {
     input: "./dist/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "es" }],
-    external: [
-      ...Object.keys(pkg.dependencies || {}),
-      ...Object.keys(pkg.devDependencies || {}),
-      ...Object.keys(pkg.peerDependencies || {}),
-    ],
+    output: [{ file: "dist/ts-websocket.d.ts", format: "es" }],
     plugins: [
-      dts(),
+      dts(``),
       del({
         targets: [
           "dist/**/*",
-          "!dist/index.js",
-          "!dist/index.min.js",
-          "!dist/index.js.map",
-          "!dist/index.min.js.map",
-          "!dist/index.d.ts",
+          "!dist/*.js",
+          "!dist/*.map",
+          "!dist/types/**/*",
+          "!dist/ts-websocket.d.ts",
         ],
         hook: "buildEnd",
       }),

@@ -20,7 +20,8 @@ Install the package using npm or yarn:
 
 ```bash
 npm install @dyniqo/ts-websocket
-# or
+```
+```bash
 yarn add @dyniqo/ts-websocket
 ```
 
