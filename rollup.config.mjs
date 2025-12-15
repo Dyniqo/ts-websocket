@@ -7,7 +7,7 @@ import json from "@rollup/plugin-json";
 import del from "rollup-plugin-delete";
 const banner = `/*!
  * ts-websocket
- * by LorestaniMe <dyniqo@gmail.com>
+ * by LorestaniMe <contact@dyniqo.dev>
  * https://github.com/Dyniqo/ts-websocket
  * License MIT
  */
