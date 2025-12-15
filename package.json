@@ -1,9 +1,9 @@
 {
   "name": "@dyniqo/ts-websocket",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "Dyniqo",
-    "url": "https://github.com/Dyniqo"
+    "url": "https://dyniqo.dev"
   },
   "description": "A robust and flexible TypeScript library for managing WebSocket connections alongside an HTTP server. This library provides seamless integration into Node.js applications with built-in support for dependency injection, modular design, and extensibility.",
   "main": "dist/ts-websocket.cjs.js",

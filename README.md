@@ -197,7 +197,8 @@ npm run test
 
 We'd love to hear from you! If you have questions, suggestions, or need support, here are the ways to reach us:
 
-📧 **Email:** [dyniqo@gmail.com](mailto:dyniqo@gmail.com)  
+🌐 **Website:** [Dyniqo.dev](https://dyniqo.dev)  
+📧 **Email:** [contact@dyniqo.dev](mailto:contact@dyniqo.dev)  
 🐛 **GitHub Issues:** [Open an Issue](https://github.com/Dyniqo/ts-websocket/issues)
 
 We look forward to hearing from you!
